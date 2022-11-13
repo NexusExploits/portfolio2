@@ -133,7 +133,7 @@ section{
 .about-card{
     background-color: #0f0f0f;
     min-width: 40em;
-    min-height: 40em;
+    min-height: auto;
     border-radius: 10px;
     border: 1px solid #ff0d0d;
     padding: 30px;
@@ -153,6 +153,16 @@ section{
     letter-spacing: 2px;
     margin-bottom: 30px;
     text-align: left;
+}
+
+.about-card a{
+    color:#ff3838;
+    text-decoration: none;
+    transition: 0.7s ease;
+}
+
+.about-card a:hover{
+    color: rgba(255, 43, 43, 60%);
 }
 
 .services-section{
@@ -175,6 +185,8 @@ section{
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+
 .card{
     
     background-color: #0e0e0e;
@@ -191,6 +203,7 @@ section{
 
 .card:hover{
     box-shadow: 0px 10px 25px rgba(255, 43, 43, 20%);
+    transform: scale(1.1);
 }
 
 .card-icon
@@ -205,29 +218,54 @@ section{
     color: rgb(255, 46, 46);
 }
 
+.card-description{
+    padding-top: 5px;
+    word-wrap: break-word;
+}
 
+.card-description a{
+    text-decoration: none;
+    transition: 0.7s ease;
+    color:#ac5656;
+    display: flex;
+    padding-left: 40%;
+
+}
+
+.card-description a:hover{
+    transform: scale(1.1);
+    color:#ff0d0d;
+}
 .contact-section{
     background-color:#181818;
+    display: flex;
+    padding: 10em 20em 10em -50em; 
+
 }
 
 #contact-title{
+
     text-align: left;
+    white-space: nowrap;
 }
 
-#contact-content{
-    justify-content: space-between;
-}
 
 #contact-card{
     background-color: #141414;
     border: 0px;
 }
 
+.contact-card-container{
+    padding-left: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
 
 #contact-card:hover{
     background-color: rgba(255, 43, 43, 20%);
+    transform: scale(1.2);
 }
-
 
 footer{
     background-color: #0e0e0e;
@@ -310,7 +348,7 @@ footer p{
 @media(max-width:641px)
 {   
     body{
-        font-size: 10px;
+        font-size: 9px;
     }
     .main-content h2{
         font-size: 0.8em;
@@ -323,19 +361,28 @@ footer p{
         margin-left: -70px;
     }
 
-    
-}
+    .contact-card-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-section{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
 
+    }
+}
 @media(max-width:300px)
 {
     body{
-        font-size: 10px;
+        font-size: 5px;
     }
     .card{
-        width: 20em;
-        
+        width: auto;
     }
-    .card{
-        margin-left: -20px;
+    .section-title{
+        display:flex;
+        justify-content: center;
+        flex-direction: row;
     }
 }
